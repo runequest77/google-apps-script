@@ -9,3 +9,23 @@ function logFunctionNameAndArgs() {
     console.log(`args:`, ...args);
   }
 }
+
+
+function logFunctionNameAndArgsTest() {
+  //引数なしテスト
+  sampleFuncA();
+  //コンソールへの出力結果
+  //called:sampleFuncA
+
+  //引数ありテスト
+  sampleFuncB("arg1","arg2");
+  //コンソールへの出力結果
+  //called:sampleFuncB
+  //args: arg1 arg2
+}
+function sampleFuncA() {
+  logFunctionNameAndArgs();
+}
+function sampleFuncB(x,y) {
+  logFunctionNameAndArgs(x,y);
+}
